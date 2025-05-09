@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "da9b7870-a089-4515-aca4-e95616aaf000",
+		"name": "secure-file-sharing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23250808",
+		"_collection_link": "https://dev999-6769.postman.co/workspace/dev-Workspace~5567e6d0-ae1d-49d7-826a-34c362651e2f/collection/23250808-da9b7870-a089-4515-aca4-e95616aaf000?action=share&source=collection_link&creator=23250808"
+	},
+	"item": [
+		{
+			"name": "sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@example.com\",\r\n    \"password\": \"password@123\",\r\n    \"username\": \"test1\",\r\n    \"role\": \"client\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@example.com\",\r\n    \"password\": \"password@123\",\r\n    \"username\": \"test1\",\r\n    \"role\": \"client\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzg0NzU0LCJpYXQiOjE3NDY3ODI5NTQsImp0aSI6IjFiODQwOTM3Mzg0NjRlZmY4OGJmZGU2NjllNGFhMmJiIiwidXNlcl9pZCI6NH0.KT2h1dQ7iluRPmEn4piChBeMzNG9YMlDG2X41Me_NJM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/THErock43/Downloads/Dr_Saviour_Final_Report_Chapter10_References_Appendices.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/upload/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listing of files",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzg0OTM4LCJpYXQiOjE3NDY3ODMxMzgsImp0aSI6ImY4ZWI5YzQ2NmQ0YTRmYzJhNjc5MTVmYmYyZjRiZDhhIiwidXNlcl9pZCI6M30.Zym5ksDHdOSRVMq9qxdcPQSNxFUxHKtRd7W5IrqTcIE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/auth/files/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign up ops",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test2@example.com\",\r\n    \"password\": \"password@123\",\r\n    \"username\": \"test2\",\r\n    \"role\": \"ops\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in ops",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test2@example.com\",\r\n    \"password\": \"password@123\",\r\n    \"username\": \"test2\",\r\n    \"role\": \"ops\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate download url",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzg0OTM4LCJpYXQiOjE3NDY3ODMxMzgsImp0aSI6ImY4ZWI5YzQ2NmQ0YTRmYzJhNjc5MTVmYmYyZjRiZDhhIiwidXNlcl9pZCI6M30.Zym5ksDHdOSRVMq9qxdcPQSNxFUxHKtRd7W5IrqTcIE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/auth/file/download-url/4/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"file",
+						"download-url",
+						"4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2Nzg0OTM4LCJpYXQiOjE3NDY3ODMxMzgsImp0aSI6ImY4ZWI5YzQ2NmQ0YTRmYzJhNjc5MTVmYmYyZjRiZDhhIiwidXNlcl9pZCI6M30.Zym5ksDHdOSRVMq9qxdcPQSNxFUxHKtRd7W5IrqTcIE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/auth/file/download/4/OPvuFSWwNLBrjdk9dpjNlifr1EnbjnGh/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"file",
+						"download",
+						"4",
+						"OPvuFSWwNLBrjdk9dpjNlifr1EnbjnGh",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
